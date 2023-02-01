@@ -27,8 +27,10 @@ def get_book(message):
     
 @bot.message_handler(commands=['системы_счисления'])
 def sist(message):
-    photo = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/Системы счисления/picture.png', 'rb')
-    bot.send_photo(message.chat.id, photo)
+    photo1 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/sistem/picture.png', 'rb')
+    bot.send_photo(message.chat.id, photo1)
+    photo1.close()
+    
     
     
 @bot.message_handler(commands=['int'])
@@ -45,19 +47,36 @@ def _float_(message):
     
 @bot.message_handler(commands=['string'])
 def _str_(message):
-    photo1 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/Без имени-1.png', 'rb')
+    photo1 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/1.png', 'rb')
     bot.send_photo(message.chat.id, photo1)
-    photo2 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/Без имени-2.png', 'rb')
+    photo2 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/2.png', 'rb')
     bot.send_photo(message.chat.id, photo2)
-    photo3 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/Без имени-3.png', 'rb')
+    photo3 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/3.png', 'rb')
     bot.send_photo(message.chat.id, photo3)
-    photo4 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/Без имени-4.png', 'rb')
+    photo4 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/4.png', 'rb')
     bot.send_photo(message.chat.id, photo4)
+    photo5 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/5.png', 'rb')
+    bot.send_photo(message.chat.id, photo5)
+    photo6 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/string/6.png', 'rb')
+    bot.send_photo(message.chat.id, photo6)
+    photo6.close()
+    photo5.close()
+    photo4.close()
+    photo3.close()
+    photo2.close()
+    photo1.close()
     
     
-@bot.message_handler(commands=['control_characters'])
+@bot.message_handler(commands=['управляющие_символы'])
 def contr(message):
-    photo = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/Управляющие символы/Без имени-1.png', 'rb')
+    photo = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/control_symb/Без имени-1.png', 'rb')
+    bot.send_photo(message.chat.id, photo)
+    photo.close()
+    
+    
+@bot.message_handler(commands=['списки'])
+def contr(message):
+    photo = open('', 'rb')
     bot.send_photo(message.chat.id, photo)
     
     
