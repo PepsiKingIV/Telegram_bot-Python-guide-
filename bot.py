@@ -20,7 +20,9 @@ def start(message):
     + '/float\n'
     + '/string\n'
     + '/управляющие_символы\n'
-    + '/списки')
+    + '/списки\n'
+    + '/кортежи\n'
+    + '/словари')
     bot.send_message(message.chat.id, mess, parse_mode='html')
     
     
@@ -82,7 +84,7 @@ def contr(message):
     
     
 @bot.message_handler(commands=['списки'])
-def contr(message):
+def lists(message):
     photo1 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/Lists/Pic1.png', 'rb')
     photo2 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/Lists/Pic2.png', 'rb')
     photo3 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/Lists/Pic3.png', 'rb')
@@ -98,7 +100,29 @@ def contr(message):
     photo3.close()
     photo2.close()
     photo1.close()
-
-
     
+
+@bot.message_handler(commands=['кортежи'])
+def tuples(message):
+    msg = '''
+    Кортежи, как и списки, являются последовательностями произвольных элементов. 
+В отличие от списков кортежи неизменяемы. '''
+    bot.send_message(message.chat.id, msg, parse_mode='html')
+    photo1 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/tuples/pic.png', 'rb')
+    bot.send_photo(message.chat.id, photo1)
+    photo1.close()
+    
+    
+@bot.message_handler(commands=['словари'])
+def dictionary(message):
+    msg = 'Словари - изменяемая структура данных. Имеет вид - ключ : значние'
+    bot.send_message(message.chat.id, msg, parse_mode='html')
+    photo1 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/dictionary/pic1.png', 'rb')
+    photo2 = open('/Users/aleksandr/Documents/Programming/Python/telegran_python_guide_bot/dictionary/pic2.png', 'rb')
+    bot.send_photo(message.chat.id, photo1)
+    bot.send_photo(message.chat.id, photo2)
+    photo2.close()
+    photo1.close()
+    
+
 bot.polling(non_stop=True)
